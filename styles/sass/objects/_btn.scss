@@ -1,0 +1,64 @@
+.button {
+  @include font-size(18);
+  display: inline-block;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  border-style: solid;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: $color-black;
+  cursor: pointer;
+  height: 50px;
+
+  &--pink {
+    background-color: $color-pink;
+    border-color: $color-pink;
+
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+
+  &--black {
+    color:$color-white;
+    font-family: $font-primary;
+    background-color: $color-black;
+    border-color: $color-black;
+
+    &:hover {
+      background: $color-pink-greybackground;
+      color: $color-black;
+    }
+  }
+
+  &--large {
+    padding: 16px 30px;
+    height: auto;
+    @include breakpoint(small-max) {
+      padding: 22px 90px;
+      height: 62px;
+    }
+  }
+
+
+}
+
+
+//userinput buttons for contact on every page
+.userinput_button{
+  width:100%;
+  padding: 12px 55px 15px 15px;
+  margin: 0 auto;
+  background-color: $color-background;
+  z-index: 10;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight:bold;
+  margin:1rem;
+  border-color: $color-pink;
+  border-style:solid;
+}

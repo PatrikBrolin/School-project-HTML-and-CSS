@@ -1,0 +1,205 @@
+body {
+  background-color: $color-background;
+}
+.contact__main {
+  @include flexBox(column, center, space-between);
+  margin: 0 auto;
+  padding: 0rem;
+  @include breakpoint(small-max) {
+    padding: 2rem;
+  }
+}
+.formsection {
+  background-color: $color-pink;
+  width: 100%;
+  padding: 2rem;
+  @include breakpoint(small-max) {
+    margin-bottom: 2rem;
+  }
+
+  p.text {
+    margin: 20px 0 30px;
+  }
+}
+
+.contact__form {
+  @include flexBox(column, flex-start, space-between);
+  width: 100%;
+  padding-top: 20px;
+}
+.inputWrapper {
+  position: relative;
+  display: block;
+  background-color: $color-background;
+  z-index: 2;
+
+  width: 100%;
+  cursor: pointer;
+  select {
+  @include font-size(18);
+    font-weight: bold;
+    font-family: $font-primary;
+    border: none;
+    outline: none;
+    background: transparent;
+    appearance: none;
+    border-radius: 0;
+    display: block;
+    min-width: 100%;
+    flex-basis: 100%;
+    padding: 15px;
+    color: $color-alt-black;
+    cursor: pointer;
+  }
+  &:after {
+  @include font-size(24);
+    position: absolute;
+    background: transparent;
+    right: 0;
+    top: 2px;
+    width: 50px;
+    height: 100%;
+    line-height: 38px;
+    content: "\2228";
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+.inputs{
+  width:100%;
+  margin-top:1rem;
+  @include flexBox(column, flex-start, space-between);
+   label{
+     margin-bottom:1rem;
+     margin-top:1rem;
+  }
+   .userinput{
+    width:100%;
+ }
+ 
+ @include breakpoint(small-max){
+letter-spacing: 0.01rem;
+ @include flexBox(row, center, space-between);
+label {
+  min-width: 12%;
+ text-align:left;
+ padding-right:20px;
+}}
+
+
+@include breakpoint(large-min ){
+  letter-spacing: 0.02rem;
+  @include flexBox(row, center, space-between);
+ label {
+   min-width: 10%;
+  text-align:left;
+  padding-right:20px;
+ }}
+} 
+
+.input-column{
+  width:100%;
+  @include flexBox(column, flex-start, space-between);
+  label{
+    min-width: 10%;
+    margin-bottom:1rem;
+    margin-top:1rem;
+  }
+  @include breakpoint(small-max){
+  @include flexBox(row, flex-start, space-between);
+  margin-bottom:1rem; 
+  margin-top:1rem;
+  label {
+    min-width: 10%;
+    text-align:flex-start;
+    margin:0 auto;
+    @include breakpoint(small-max){
+    padding-right:34px;
+    }
+  }
+}
+}
+.txtuserinput {
+  @include font-size(16);
+  width: 100%;
+  padding: 15px;
+  background-color: $color-background;
+  z-index: 2;
+  border-radius: 5px;
+  font-family: $font-primary;
+  font-weight: bold;
+  border-color: $color-pink;
+  border-style: solid;
+}
+#submit--contactform {
+  align-self: center;
+  max-width: 200px;
+  min-width: 140px;
+  padding: 15px;
+  text-align: center;
+  flex-basis: 100%;
+  padding-top:1rem;
+}
+#log {
+  padding-top: 1rem;
+}
+
+.picture-info-map {
+  width: 100%;
+}
+
+.picture-info {
+  background-color: $color-black;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  @include breakpoint(xsmall-max) {
+    @include flexBox(row, stretch, flex-start);
+    padding-bottom: 0rem;
+    margin-top: 0%;
+    width: 100%;
+    img {
+      width: 50%;
+    }
+  }
+  @include breakpoint(medium-tablet-max) {
+    max-height: 300px;
+    img {
+      width: 70%;
+    }
+  }
+
+}
+.contactdetails__div {
+  @include flexBox(column, flex-start, space-between);
+  margin: 2rem;
+  @include breakpoint(medium-tablet-max) {
+    @include flexBox(column, flex-start, center);
+  }
+  .contactdetails__row {
+    @include flexBox(row, center, space-between);
+    margin: 1rem;
+  }
+  p {
+    margin-left: 1rem;
+  }
+  @include breakpoint(xsmall-max) {
+    margin: 1rem;
+  }
+  .contacticon1 {
+    @include flexBox(row, flex-start, space-between);
+  }
+}
+
+.googlemap {
+  width: 100%;
+  height: 300px;
+  @include breakpoint(small-max) {
+    margin-top: 2rem;
+  }
+  @include breakpoint(medium-tablet-max) {
+    height: 400px;
+  }
+}

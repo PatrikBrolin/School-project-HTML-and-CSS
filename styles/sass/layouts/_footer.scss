@@ -1,0 +1,121 @@
+.footer {
+  background-color: $color-pink;
+  margin-top: 0;
+  @include breakpoint(medium-tablet-max) {
+   margin-top: 50px;
+  }
+
+  &--black {
+    @include flexBox(row, flex-start, flex-start);
+    height: auto;
+    padding: 20px;
+    @include breakpoint(medium-tablet-max) {
+    @include flexBox(row, center, flex-start);
+    height: 200px;
+    padding: 0 20px;
+  }
+
+  }
+}
+.footer-container1 {
+  @include flexBox(row, flex-start, center);
+  padding: 20px;
+  @include breakpoint(medium-tablet-max) {
+    padding: 0 20px;
+  }
+  .footer-content {
+    height: inherit;
+    flex-basis: 100%;
+    @include flexBox(column, flex-start, center);
+    @include breakpoint(medium-tablet-max) {
+      height: 180px;
+    }
+
+    //fixat till med labels här, för tillgängligheten (tova)
+    .form-object {
+      @include flexBox(column, flex-start, space-between);
+      width: 100%;
+      margin-top: 10px;
+      @include breakpoint(medium-tablet-max) {
+        @include flexBox(row, center, center);
+      }
+      input[type="email"] {
+        margin-bottom:20px;
+        @include breakpoint(medium-tablet-max) {
+          margin: 0;
+        }
+      }
+      button {
+        width: 100%;
+        margin-left: 0;
+        @include breakpoint(medium-tablet-max) {
+          margin-left: 10px;
+        }
+      }
+      input#name{
+       @include breakpoint(medium-tablet-max) {
+          margin-right: 20px;
+        }
+      }
+      label {
+        @include flexBox(row, center, space-between);
+        min-width:5%;
+        margin-bottom:10px;  
+        margin-top:10px;
+        @include breakpoint(medium-tablet-max) {
+        margin-left: 0;
+        text-align:right;
+        }
+      }
+    }
+  }
+}
+.footer-container2 {
+
+  background-color: $color-black;
+
+  .footer-object1 {
+    @include flexBox(column, left, flex-start);
+    flex-basis: 100%;
+    p {
+      display: block;
+      padding: 2px;
+    }
+  }
+  .footer-object2 {
+    @include flexBox(column, center, flex-start);
+    flex-basis: 100%;
+    a {
+      color: $color-white;
+      text-decoration-line: underline;
+      margin-bottom: 5px;
+    }
+    .icon-div {
+      display: inline-block;
+      a {
+        &:hover {
+          color: $color-pink;
+        }
+        i {
+          padding: 3px;
+          height: 100%;
+          @include font-size(30);
+          @include breakpoint(medium-tablet-max) {
+           @include font-size(40);
+          }
+        }
+      }
+    }
+  }
+  .footer-object3 {
+    @include flexBox(column, flex-end, flex-start);
+    flex-basis: 100%;
+    a {
+      display: block;
+      width: auto;
+       @include breakpoint(medium-tablet-max) {
+         width: 80px;
+        }
+    }
+  }
+}
